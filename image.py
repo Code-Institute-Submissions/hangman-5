@@ -1,4 +1,7 @@
+# Images to show how many lives you have used.
 hanging_man = {
+
+# 0 Lives used basic image before an incorrect guess. 
     1:"""
     /--------|
     |        
@@ -12,6 +15,7 @@ hanging_man = {
     |
     o-------------- """,
 
+# 1 Life used 
     2:"""
     /--------|
     |        |
@@ -25,7 +29,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# 2 lives used
     3:"""
     /--------|
     |        |
@@ -39,7 +43,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# 3 lives used
     4:"""
     /--------|
     |        |
@@ -53,7 +57,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# 4 lives used
     5:"""
     /--------|
     |        |
@@ -67,7 +71,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# 5 lives used
     6:"""
     /--------|
     |        |
@@ -81,7 +85,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# 6 lives used
     7:"""
     /--------|
     |        |
@@ -95,7 +99,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# 7 lives used
     8:"""
     /--------|
     |        |
@@ -109,7 +113,7 @@ hanging_man = {
     |
     o-------------- """,
 
-
+# all lives used game over
     9:"""
     /--------|
     |        |
