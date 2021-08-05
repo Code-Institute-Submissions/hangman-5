@@ -2,12 +2,11 @@
 import random
 from os import system, name
 from image import hanging_man
-#from words import 
+from words import random_word
 
 #Variables used to crate the program
-#word = random.choice(words)
-#word = word.upper()
-word = "BLANK"
+word = random.choice(random_word)
+word = word.upper()
 show = list(len(word)*'_')
 lives_remaining = 8
 gameWon = False
