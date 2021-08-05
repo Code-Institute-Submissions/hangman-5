@@ -2,9 +2,12 @@
 import random
 from os import system, name
 from image import hanging_man
+#from words import 
 
 #Variables used to crate the program
-word = 'BLANK'
+#word = random.choice(words)
+#word = word.upper()
+word = "BLANK"
 show = list(len(word)*'_')
 lives_remaining = 8
 gameWon = False
@@ -41,7 +44,7 @@ def clear_screen():
 def hangman_board():
     clear_screen()
     print(hanging_man[8-lives_remaining])
-    print(show)
+    print(" ".join([str(i) for i in show]))
     print(f'You have {lives_remaining} lives remaining!')
 
 
