@@ -1,5 +1,6 @@
 # Import files that will be used in my program
-import os, random, image, words
+import os, random
+from image import hanging_man
 
 #Variables used to crate the program
 word = 'BLANK'
@@ -30,18 +31,21 @@ def checking_guess(reveal, word):
 
 def hangman_board():
     print(show)
+    print(hanging_man[8-lives_remaining])
 
 
-def gameWon():
+
+#def gameWon():
 
 
-def validation():
+#def validation():
 
 
 
 #GameWon will become a function this does all the work 
 #checking if a letter or word we guessed is correct or incorrect. 
 while gameWon == False and lives_remaining > 0:
+    hangman_board()
     guess = input('Type your guess using a letter or a word:')
     guess = guess.upper()
 
@@ -54,6 +58,8 @@ while gameWon == False and lives_remaining > 0:
 # remove a life if a letter or word is guessed incorrectly.
     else:
         lives_remaining -= 1
+    
+    hangman_board()
 
 # win or lose statment
 if gameWon:
