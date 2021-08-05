@@ -31,6 +31,10 @@ def checking_guess(reveal, word):
 
 
 def clear_screen():
+    """
+    This function clears the console each time a user makes a guess to keep the console 
+    clean.
+    """
     print('\033[H\033[J', end='')
 
 
@@ -38,6 +42,7 @@ def hangman_board():
     clear_screen()
     print(hanging_man[8-lives_remaining])
     print(show)
+    print(f'You have {lives_remaining} lives remaining!')
 
 
 
