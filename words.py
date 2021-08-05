@@ -1,3 +1,5 @@
+# This is a string of different words using the .split
+# i have split it into a list.
 random_word = '''hangman
 sleep
 football

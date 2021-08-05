@@ -40,7 +40,7 @@ def clear_screen():
     print('\033[H\033[J', end='')
 
 
-# Create the playing board this is waht users can see.
+# Create the playing board this is what users can see.
 def hangman_board():
     """
     Printing the users game board to the screen
@@ -48,15 +48,12 @@ def hangman_board():
     and lives remaining.
     """
     clear_screen()
+    print("WELCOME TO HANGMAN!")
     print(hanging_man[8-lives_remaining])
     print(" ".join([str(i) for i in show]))
     print(f'You have {lives_remaining} lives remaining!')
 
 
-# def validation():
-
-
-# GameWon will become a function this does all the work
 # checking if a letter or word we guessed is correct or incorrect.
 while gameWon is False and lives_remaining > 0:
     hangman_board()
