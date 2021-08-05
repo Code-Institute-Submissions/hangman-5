@@ -1,5 +1,6 @@
 # Import files that will be used in my program
-import os, random
+import random
+from os import system, name
 from image import hanging_man
 
 #Variables used to crate the program
@@ -29,9 +30,14 @@ def checking_guess(reveal, word):
         return False
 
 
+def clear_screen():
+    print('\033[H\033[J', end='')
+
+
 def hangman_board():
-    print(show)
+    clear_screen()
     print(hanging_man[8-lives_remaining])
+    print(show)
 
 
 
