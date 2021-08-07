@@ -65,5 +65,17 @@ def play(word):
                 show = "".join(listed_words)
                 if "_" not in show:
                     gameWon = True
+        # Check if the guess is a word and
+        # all letters are in the aplhabet.
+        elif len(guess) == len(word) and guess.isalpha():
+            if guess in used_words:
+                print(f"{guess} has already been guessed.")
+            elif guess != word:
+                print(f"{guess} is not the chosen word.")
+                # Remove a life
+                lives_remaining -= 1
+                used_words.append(guess)
+            else:
+                gameWon = True
+                show = word
         
-
