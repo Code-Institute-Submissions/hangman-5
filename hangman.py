@@ -37,26 +37,33 @@ def play(word):
     used_words = []
     lives_remaining = 8
 
-    # checking if a letter or word we guessed is correct or incorrect.
-    while gameWon is False and lives_remaining > 0:
-        guess = input('Type your guess using a letter or a word:').upper()
-
-# This section reveals a correctly guessed letter
-        if guess == word:
-            gameWon = True
-            show = word
-        if len(guess) == 1 and guess in word:
-            gameWon = checking_guess(guess, word)
-# remove a life if a letter or word is guessed incorrectly.
-        else:
-            lives_remaining -= 1
-
-# win or lose statment
-    if gameWon:
-        print('Congratulations! You guessed the correct word. \n')
-    else:
-        print(f'Unlucky you guessed incorrectly! The word was: {word}, try again')
-
-
-
+    # While loop begins
+    while not gameWon and lives_remaining > 0:
+        guess = input("Type your guess using a letter or a word:").upper()
+        # Clear the game board so that out command window is cleaner.
+        clear_screen()
+        # Check if the length of the guess is just 1 letter,
+        # Also if the guess is in the alphabet.
+        if len(guess) == 1 and guess.isalpha():
+            if guess in used_letters:
+                print(f"This letter {guess} has already been guessed.")               
+            elif guess not in word:
+                print(f"This letter {guess} is not in the chosen word.")
+                # Remove a life if the guess is incorrect
+                lives_remaining -= 1
+                used_letters.append(guess)
+            else:
+                print(f"Fantastic, {guess} is in the chosen word!")
+                used_letters.append(guess)
+                listed_words = list(show)
+                # Reveal the guessed letter from the word
+                # in the correct location.
+                reveal = [i for i, letter in enumerate(word) if letter == guess]
+                # show every guess occurence.
+                for index in reveal:
+                    listed_words[index] = guess
+                show = "".join(listed_words)
+                if "_" not in show:
+                    gameWon = True
+        
 
