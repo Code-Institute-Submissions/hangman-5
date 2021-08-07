@@ -78,4 +78,21 @@ def play(word):
             else:
                 gameWon = True
                 show = word
-        
+        else:
+            print("Guess is not valid. Please try again!")
+
+        # Print after all checks.
+        print(hanging_man[8-lives_remaining])
+        print(f"CHOSEN WORD: {show}")
+        print("\n")
+        print(f"You have {lives_remaining}, lives remaining")
+        print("\n")
+ 
+    # Once you have won or lost display a message.
+    if gameWon:
+        print("Congratulations! You guessed the correct word.")
+    else:
+        print("Unlucky you guessed incorrectly!")
+        print(f"The word was: {word}, try again")
+
+
