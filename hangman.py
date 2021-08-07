@@ -1,6 +1,6 @@
 # Import files that will be used in my program
 import random
-from image import hanging_man
+from image import hanging_man, welcome
 from words import random_word
 
 # Variables used throught hangman.
@@ -57,8 +57,7 @@ def hangman_board():
 # checking if a letter or word we guessed is correct or incorrect.
 while gameWon is False and lives_remaining > 0:
     hangman_board()
-    guess = input('Type your guess using a letter or a word:')
-    guess = guess.upper()
+    guess = input('Type your guess using a letter or a word:').upper()
 
 # This section reveals a correctly guessed letter
     if guess == word:
