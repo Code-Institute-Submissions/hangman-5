@@ -1,37 +1,26 @@
 # Import files that will be used in my program
 import random
 from image import hanging_man, welcome
-from words import random_word
+from words import random_words
 
 # Variables used throught hangman.
-word = random.choice(random_word)
+word = random.choice(random_words)
 word = word.upper()
 show = list(len(word)*'_')
 lives_remaining = 8
 gameWon = False
 
 
-def checking_guess(reveal, word):
+def choose_word():
     """
-    When a user inputs a guess of any letter this function will check
-    if the letter is part of the word and if so reveal that letter.
+    Pick out a random word from the list of words
+    on our words file.
     """
-    # This is a global variable
-    global show
-
-    # This section reveals a correctly guessed letter
-    for letter in range(0, len(word)):
-        reveal = word[letter]
-        if guess == reveal:
-            show[letter] = guess
-    # Show is the random word chosen from the words file
-    if '_' not in show:
-        return True
-    else:
-        return False
+    word = random.choice(random_words)
+    # Display the whole word in uppercase.
+    return word.upper()
 
 
-# Clear the console to make things easier to read
 def clear_screen():
     """
     This function clears the console each time a user makes a guess to keep
