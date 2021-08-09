@@ -12,7 +12,7 @@ please see [Hangman Wiki](https://en.wikipedia.org/wiki/Hangman_(game))
 
 Here you can find a demo of the deployed game [here](https://mats-hangman.herokuapp.com/)
 
-![Game on devices]()
+![Game on devices](assets/images//devices.jpg)
 
 ---
 
@@ -125,4 +125,5 @@ Hosted on github pages
 
 ### 6.2. Acknowledgements
 [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/?originalSubdomain=ng) for the incredible mentoring support.
+
 The [Code Institute](https://codeinstitute.net/) student care and mentors.  
