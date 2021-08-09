@@ -96,3 +96,21 @@ def play(word):
         print(f"The word was: {word}, try again")
 
 
+def main():
+    """
+    To begin the game for the first time and to see if you would wish 
+    to continue playing once the first game has ended.
+    """
+    word = choose_word()
+    play(word)   
+    while input("Would you like to Play Again? (Y/N) ").upper() == "Y":
+        word = choose_word()
+        play(word)
+
+
+# code frame so that program is able
+# to run script on command line
+if __name__ == "__main__":
+    main()
+
+
