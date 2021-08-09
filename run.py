@@ -62,9 +62,9 @@ def play(word):
 
     # While loop begins
     while not gameWon and lives_remaining > 0:
-        guess = input("Type your guess using a letter or a word:").upper()
         # Clear the game board so that out command window is cleaner.
         clear_screen()
+        guess = input("Type your guess using a letter or a word:").upper()
         # Check if the length of the guess is just 1 letter,
         # Also if the guess is in the alphabet.
         if len(guess) == 1 and guess.isalpha():
