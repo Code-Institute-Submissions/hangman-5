@@ -37,18 +37,67 @@ Hangman is a simple word guessing game the rules are as follows...
 
 #### 2.1. Existing Features
 
+* Main start game screen
+  * Displays the main welcome board with a title and a welcome message.
+  * Asks you to choose a username.
+
+  ![Main start game screen]()
+
+* Main game board
+  * Displays a welcome message including the chosen username
+  * Shows the user an empty hangman image and lives remaining 
+  * Displays the chosen word (Your Word) represented by underscores
+  * Asks the question of what you would like to guess.
+
+  ![Main game board]()
+
+* Guessing a correct answer
+  * Reveals the guessed letter where the underscores are.
+  * Message telling you that it was a correct guess.
+
+  ![Correct answer]()
+
+* Guessing Incorrect answer
+  * Message is displayed showing the incorrect guess.
+  * a life is lost and a piece of the hangman is displayed.
+
+  ![Incorrect guess]()
+
+* Invalid guess
+  * Message is displayed showing it was an invalid guess.
+  * message is displayed if you have already used the same letter or word. 
+
+  ![Invalid guess]()
+
+* Winning or loosing the game
+  * A message is displayed depending on a win or a loss.
+  * User will be asked if they wish to play again. 
+
+  ![End game]()
+
 #### 2.2. Future Features
-- 
+- There could be an option for difficulty level to increase words to a harder or easier level depending on the user.
+- Images could be improved graphically.
+- Hints could be added to help the user guess the word. 
 
 ---
 
 ## Data Model
+I decided to use the play function to run my entire game with multiple of other functions that work alongside it. 
+The play game function contains the game board that is diplayed including the welcome message and the end game results,
+as well as containing a while loop which loops through all the different possibilities in my game such as, validating the 
+users input to make sure the users guess is a correct or incorrect guess, to check if what was inputted is valid and usable. This will take 3 different if elif else statments to run through and validate code. This will loop through until the end of the game.
+
+I have a choose word function which is passes to the play function. This chooses a word at random to begin the game, along with the clear sceen function which is used at a certain stage of the play function to keep the game board looking clean and tidy. finally i used a main function this allows the game to start and also asks the user if they wish to play again once the game has ended, followed by a small if statment. This if statment allows the script to run on the command line. 
+
+I have also designed a flowchart stating the steps that i visualised how i wanted the user to see the game, the flowchart starts from the top and works its way down follow the arrows in the directions that come from a spesific process box that you are in. 
+Please see my [Flowchart here](assets/images//Flowchart.jpg)
 
 ---
 
 ## Testing
 
-Please see the testing process [here](testing.md)
+Please see the testing process [here](TESTING.md)
 
 ---
 
@@ -58,7 +107,12 @@ Please see the testing process [here](testing.md)
 
 Hosted on github pages
 
-1. 
+*Steps for deployment:
+  1. Fork or clone this repository.
+  2. Create a new Heroku app.
+  3. Set the buildpacks to **Python** and **NodeJS** in that order.
+  4. Link the Heroku app to the repository.
+  5. Click on Deploy.
 
 ---
 
