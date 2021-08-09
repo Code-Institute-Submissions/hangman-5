@@ -24,11 +24,11 @@ def clear_screen():
 
 def play(word):
     """
-    create while loop to run the game until the secret word is guessed
+    create while loop to run the game until the chosen word is guessed
     or player runs out of lives_remaining.
-    Also contains three possible conditions each based on different input.
+    There are different conditions based on validation.
     Guessing a letter, word or input that is not a letter or word of
-    same length as secret word.
+    same length as chosen word.
     """
     # Variables used through the program.
     show = "_" * len(word)
@@ -36,6 +36,29 @@ def play(word):
     used_letters = []
     used_words = []
     lives_remaining = 8
+
+    clear_screen()
+
+    # Short instrctions for how the game is played
+    print(welcome)
+    print("-------------------------------------------------- ")
+    print("Welcome, we hope you enjoy!")
+    print("A row of underscores will show how many letter the word has.")
+    print("If you guess a letter that is in the hidden word,")
+    print("the letter will then be displayed instead of an underscore")
+    print("in the correct position.")
+    print("You will have 8 lives. Good Luck!")
+    print("-------------------------------------------------- ")
+    # Create a username before playing hangman.
+    username = input("Please Enter A Username: ")
+    print(f"Hello {username}, let's play Hangman. Good Luck!")
+    print("--------------------------------------------------- \n")
+    # Load up the main game board to begin playing hangman.
+    print(hanging_man[8-lives_remaining])
+    print(f"YOUR WORD: {show}")
+    print("\n")
+    print(f"You have {lives_remaining} lives remaining")
+    print("\n")
 
     # While loop begins
     while not gameWon and lives_remaining > 0:
@@ -46,7 +69,7 @@ def play(word):
         # Also if the guess is in the alphabet.
         if len(guess) == 1 and guess.isalpha():
             if guess in used_letters:
-                print(f"This letter {guess} has already been guessed.")               
+                print(f"This letter {guess} has already been guessed.")
             elif guess not in word:
                 print(f"This letter {guess} is not in the chosen word.")
                 # Remove a life if the guess is incorrect
@@ -83,26 +106,27 @@ def play(word):
 
         # Print after all checks.
         print(hanging_man[8-lives_remaining])
-        print(f"CHOSEN WORD: {show}")
+        print(f"YOUR WORD: {show}")
         print("\n")
         print(f"You have {lives_remaining}, lives remaining")
         print("\n")
- 
+
     # Once you have won or lost display a message.
     if gameWon:
-        print("Congratulations! You guessed the correct word.")
+        print("Congratulations! You guessed the correct word.\n")
     else:
         print("Unlucky you guessed incorrectly!")
-        print(f"The word was: {word}, try again")
+        print(f"The word was: {word}, try again.")
+        print("\n")
 
 
 def main():
     """
-    To begin the game for the first time and to see if you would wish 
+    To begin the game for the first time and to see if you would wish
     to continue playing once the first game has ended.
     """
     word = choose_word()
-    play(word)   
+    play(word)
     while input("Would you like to Play Again? (Y/N) ").upper() == "Y":
         word = choose_word()
         play(word)
@@ -112,5 +136,3 @@ def main():
 # to run script on command line
 if __name__ == "__main__":
     main()
-
-
