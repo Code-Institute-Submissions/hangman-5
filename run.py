@@ -31,7 +31,7 @@ def play(word):
     same length as chosen word.
     """
     # Variables used through the program.
-    show = ("-_") * len(word)
+    show = ("_" + " ") * len(word)
     gameWon = False
     used_letters = []
     used_words = []
@@ -62,9 +62,9 @@ def play(word):
 
     # While loop begins
     while not gameWon and lives_remaining > 0:
+        guess = input("Type your guess using a letter or a word:\n").upper()
         # Clear the game board so that out command window is cleaner.
         clear_screen()
-        guess = input("Type your guess using a letter or a word:").upper()
         # Check if the length of the guess is just 1 letter,
         # Also if the guess is in the alphabet.
         if len(guess) == 1 and guess.isalpha():
@@ -78,14 +78,15 @@ def play(word):
             else:
                 print(f"Fantastic, {guess} is in the chosen word!")
                 used_letters.append(guess)
-                listed_words = list(show)
+                show_word = show.replace(" ", "")
+                listed_words = list(show_word)
                 # Reveal the guessed letter from the word
                 # in the correct location.
                 rev = [i for i, letter in enumerate(word) if letter == guess]
                 # show every guess occurence.
                 for index in rev:
                     listed_words[index] = guess
-                show = "".join(listed_words)
+                show = " ".join(listed_words)
                 if "_" not in show:
                     gameWon = True
         # Check if the guess is a word and
