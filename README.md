@@ -10,7 +10,7 @@ To win you just have to guess the word correctly, if you fail you lose. for more
 please see [Hangman Wiki](https://en.wikipedia.org/wiki/Hangman_(game)) 
 
 
-Here you can find a demo of the deployed game [here]()
+Here you can find a demo of the deployed game [here](https://mats-hangman.herokuapp.com/)
 
 Here you will find screenshots of the deployed game [here]()
 
@@ -123,6 +123,7 @@ Hosted on github pages
 
 ### 6.1. Media
 - [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Doh&t=Hangman) - Used to create the hangman image
+- [Smartdraw](https://www.smartdraw.com/flowchart/flowchart-maker.htm) - Used to design my flowchart.
 
 ### 6.2. Acknowledgements
 [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/?originalSubdomain=ng) for the incredible mentoring support.
