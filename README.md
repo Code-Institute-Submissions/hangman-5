@@ -12,8 +12,6 @@ please see [Hangman Wiki](https://en.wikipedia.org/wiki/Hangman_(game))
 
 Here you can find a demo of the deployed game [here](https://mats-hangman.herokuapp.com/)
 
-Here you will find screenshots of the deployed game [here]()
-
 ![Game on devices]()
 
 ---
@@ -41,7 +39,7 @@ Hangman is a simple word guessing game the rules are as follows...
   * Displays the main welcome board with a title and a welcome message.
   * Asks you to choose a username.
 
-  ![Main start game screen]()
+  ![Main start game screen](assets/images//onload.PNG)
 
 * Main game board
   * Displays a welcome message including the chosen username
@@ -49,31 +47,31 @@ Hangman is a simple word guessing game the rules are as follows...
   * Displays the chosen word (Your Word) represented by underscores
   * Asks the question of what you would like to guess.
 
-  ![Main game board]()
+  ![Main game board](assets/images//gamestart.PNG)
 
 * Guessing a correct answer
   * Reveals the guessed letter where the underscores are.
   * Message telling you that it was a correct guess.
 
-  ![Correct answer]()
+  ![Correct answer](assets/images//correctguess.PNG)
 
 * Guessing Incorrect answer
   * Message is displayed showing the incorrect guess.
   * a life is lost and a piece of the hangman is displayed.
 
-  ![Incorrect guess]()
+  ![Incorrect guess](assets/images//incorrect.PNG)
 
 * Invalid guess
   * Message is displayed showing it was an invalid guess.
   * message is displayed if you have already used the same letter or word. 
 
-  ![Invalid guess]()
+  ![Invalid guess](assets/images//notvalid.PNG)
 
 * Winning or loosing the game
   * A message is displayed depending on a win or a loss.
   * User will be asked if they wish to play again. 
 
-  ![End game]()
+  ![End game](assets/images//wingame.PNG, assets/images//losegame.PNG)
 
 #### 2.2. Future Features
 - There could be an option for difficulty level to increase words to a harder or easier level depending on the user.

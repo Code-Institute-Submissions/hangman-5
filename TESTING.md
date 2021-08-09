@@ -7,9 +7,9 @@
 
 #### Deployment Test
 
-![Game Launch]()
-![Game in play]()
-![End Game]()
+![Game Launch](testing//onload.PNG)
+![Game in play](testing//correctguess.PNG)
+![End Game](testing//wingame.PNG)
 
 ---
 
@@ -30,5 +30,8 @@
 
 - I noticed a bug where when running on heroku the eneter your username question wouldnt show until a key was pressed, after some 
   research i found on the slack community that adding a \n is what was needed to fix this bug.
+
+- Had a bug where no gaps were showing in the underscore to symbolise how many letters were needed. I fixed this using a new
+  variable which i added to change a space from the show variable to an empty string in the new show_word variable. 
 
 Head back to the [ReadMe file](README.md)
