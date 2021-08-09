@@ -69,9 +69,9 @@ def play(word):
         # Also if the guess is in the alphabet.
         if len(guess) == 1 and guess.isalpha():
             if guess in used_letters:
-                print(f"This letter {guess} has already been guessed.")
+                print(f"The letter {guess} has already been guessed.")
             elif guess not in word:
-                print(f"This letter {guess} is not in the chosen word.")
+                print(f"The letter {guess} is not in the chosen word.")
                 # Remove a life if the guess is incorrect
                 lives_remaining -= 1
                 used_letters.append(guess)
@@ -127,7 +127,7 @@ def main():
     """
     word = choose_word()
     play(word)
-    while input("Would you like to Play Again? (Y/N) ").upper() == "Y":
+    while input("Would you like to Play Again? (Y/N) \n").upper() == "Y":
         word = choose_word()
         play(word)
 
