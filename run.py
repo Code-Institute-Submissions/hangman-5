@@ -50,7 +50,7 @@ def play(word):
     print("You will have 8 lives. Good Luck!")
     print("-------------------------------------------------- ")
     # Create a username before playing hangman.
-    username = input("Please Enter A Username: ")
+    username = input("Please Enter A Username: \n")
     print(f"Hello {username}, let's play Hangman. Good Luck!")
     print("--------------------------------------------------- \n")
     # Load up the main game board to begin playing hangman.
