@@ -81,9 +81,9 @@ def play(word):
                 listed_words = list(show)
                 # Reveal the guessed letter from the word
                 # in the correct location.
-                reveal = [i for i, letter in enumerate(word) if letter == guess]
+                rev = [i for i, letter in enumerate(word) if letter == guess]
                 # show every guess occurence.
-                for index in reveal:
+                for index in rev:
                     listed_words[index] = guess
                 show = "".join(listed_words)
                 if "_" not in show:
