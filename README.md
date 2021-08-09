@@ -19,6 +19,19 @@ Here you will find screenshots of the deployed game [here]()
 ---
 
 ## How To Play
+
+Hangman is a simple word guessing game the rules are as follows...
+
+1. You will be welcomed to the game and asked to insert a username of you choice. 
+2. Once you have chosen your username the game will welcome you in and the game board will be shown.
+3. There will be a random word chosen for you which will be represented by underscores on your gameboard.
+4. You will be show the amount of lives you have followed by the question "which letter or word would you like to guess?".
+5. You can guess letters or a word depending on what you choose by typing it on your keyboard. 
+6. if that letter or word is in the word chosen at random for you, it will then appear instead of an underscore. 
+7. if that letter or word is not in the word then an extra piece of the hangman will be displayed and a life will be lost. 
+8. Contine this until the game is over and you have won or lost. 
+9. When the game has ended you will be asked if you would like to play again, simply type the letter y or n for yes or no.
+
  
 ## Features
 
