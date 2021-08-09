@@ -31,7 +31,7 @@ def play(word):
     same length as chosen word.
     """
     # Variables used through the program.
-    show = ("_" + "") * len(word)
+    show = ("_" + " ") * len(word)
     gameWon = False
     used_letters = []
     used_words = []
