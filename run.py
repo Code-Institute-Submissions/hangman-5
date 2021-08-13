@@ -25,10 +25,9 @@ def clear_screen():
 def play(word):
     """
     create while loop to run the game until the chosen word is guessed
-    or player runs out of lives_remaining.
-    There are different conditions based on validation.
-    Guessing a letter, word or input that is not a letter or word of
-    same length as chosen word.
+    or player runs out of lives_remaining. Guessing anything that is not 
+    a letter or word of the same length as the chosen word shows as a message
+    above the game. There are different conditions based on validation.
     """
     # Variables used through the program.
     show = ("_" + " ") * len(word)
