@@ -58,7 +58,7 @@ def play_board(word):
         if all(char in valid_characters for char in username):
             break
         print("That's invalid, please try again.")
-    print(f"Hello {username}, let's play_board Hangman. Good Luck!")
+    print(f"Hello {username}, let's play Hangman. Good Luck!")
     print("--------------------------------------------------- \n")
 
     # Load up the main game board to begin playing hangman.
