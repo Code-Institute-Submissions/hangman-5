@@ -4,6 +4,7 @@ from image import hanging_man, welcome
 from words import random_words
 
 
+# Randomly chooses a word from the words file to give the user to guess.
 def choose_word():
     """
     Pick out a random word from the list of words
@@ -14,6 +15,7 @@ def choose_word():
     return word.upper()
 
 
+# clears the screen to allow for a tidy playing board.
 def clear_screen():
     """
     This function clears the console each time a user makes a guess to keep
@@ -22,10 +24,11 @@ def clear_screen():
     print('\033[H\033[J', end='')
 
 
-def play(word):
+# Main function used to loop through different decisions a user makes.
+def play_board(word):
     """
     create while loop to run the game until the chosen word is guessed
-    or player runs out of lives_remaining. Guessing anything that is not 
+    or player runs out of lives_remaining. Guessing anything that is not
     a letter or word of the same length as the chosen word shows as a message
     above the game. There are different conditions based on validation.
     """
@@ -48,10 +51,16 @@ def play(word):
     print("in the correct position.")
     print("You will have 8 lives. Good Luck!")
     print("-------------------------------------------------- ")
-    # Create a username before playing hangman.
-    username = input("Please Enter A Username: \n")
-    print(f"Hello {username}, let's play Hangman. Good Luck!")
+    # Create a username before playing hangman using letters & numbers.
+    valid_characters = 'abcdefghijklmnopqrstuvwxyz1234567890'
+    while True:
+        username = input("Please Enter A Username: \n")
+        if all(char in valid_characters for char in username):
+            break
+        print("That's invalid, please try again.")
+    print(f"Hello {username}, let's play_board Hangman. Good Luck!")
     print("--------------------------------------------------- \n")
+
     # Load up the main game board to begin playing hangman.
     print(hanging_man[8-lives_remaining])
     print(f"YOUR WORD: {show}")
@@ -59,13 +68,13 @@ def play(word):
     print(f"You have {lives_remaining} lives remaining")
     print("\n")
 
-    # While loop begins
+    # While loop starts here
     while not gameWon and lives_remaining > 0:
         guess = input("Type your guess using a letter or a word:\n").upper()
-        # Clear the game board so that out command window is cleaner.
+        # Clear the game board so that our command window is cleaner.
         clear_screen()
         # Check if the length of the guess is just 1 letter,
-        # Also if the guess is in the alphabet.
+        # Also if the guessed letter is in the alphabet.
         if len(guess) == 1 and guess.isalpha():
             if guess in used_letters:
                 print(f"The letter {guess} has already been guessed.")
@@ -79,8 +88,8 @@ def play(word):
                 used_letters.append(guess)
                 show_word = show.replace(" ", "")
                 listed_words = list(show_word)
-                # Reveal the guessed letter from the word
-                # in the correct location.
+                # show the guessed letter from the word
+                # in the correct blank space.
                 rev = [i for i, letter in enumerate(word) if letter == guess]
                 # show every guess occurence.
                 for index in rev:
@@ -120,16 +129,23 @@ def play(word):
         print("\n")
 
 
+# Call this function to start the game and continue if the user wishes
 def main():
     """
     To begin the game for the first time and to see if you would wish
     to continue playing once the first game has ended.
     """
     word = choose_word()
-    play(word)
-    while input("Would you like to Play Again? (Y/N) \n").upper() == "Y":
-        word = choose_word()
-        play(word)
+    play_board(word)
+
+    choice = input("Would you like to Play Again? (Y/N) \n").upper()
+    if choice == "Y":
+        main()
+    elif choice == "N":
+        print("Thank you for playing!")
+        exit()
+    else:
+        print("Invalid option game has ended.")
 
 
 # code frame so that program is able
