@@ -6,7 +6,7 @@ This is a python termianl based game based on the original Hangman game. This wi
 using Code Institutes mock terminal on Heroku. Hangman is a very well known word guessing game, the rules
 are simple. Guess the word before its to late and all the man is shown on the Hangman board and the game
 is over. The user is able to guess letters and words, for each letter or word incorrect a life is lost. 
-To win you just have to guess the word correctly, if you fail you lose. for more information on this game 
+To win you have to guess the word correctly, if you fail you lose. for more information on this game 
 please see [Hangman Wiki](https://en.wikipedia.org/wiki/Hangman_(game)) 
 
 
@@ -86,9 +86,9 @@ The play game function contains the game board that is diplayed including the we
 as well as containing a while loop which loops through all the different possibilities in my game such as, validating the 
 users input to make sure the users guess is a correct or incorrect guess, to check if what was inputted is valid and usable. This will take 3 different if elif else statments to run through and validate code. This will loop through until the end of the game.
 
-I have a choose word function which is passes to the play function. This chooses a word at random to begin the game, along with the clear sceen function which is used at a certain stage of the play function to keep the game board looking clean and tidy. finally i used a main function this allows the game to start and also asks the user if they wish to play again once the game has ended, followed by a small if statment. This if statment allows the script to run on the command line. 
+I have a choose word function which is passes to the play function. This chooses a word at random to begin the game, along with the clear sceen function which is used at a certain stage of the play function to keep the game board looking clean and tidy. finally I used a main function this allows the game to start and also asks the user if they wish to play again once the game has ended, followed by a small if statment. This if statment allows the script to run on the command line. 
 
-I have also designed a flowchart stating the steps that i visualised how i wanted the user to see the game, the flowchart starts from the top and works its way down follow the arrows in the directions that come from a spesific process box that you are in. 
+I have also designed a flowchart stating the steps that I visualised how I wanted the user to see the game, the flowchart starts from the top and works its way down follow the arrows in the directions that come from a spesific process box that you are in. 
 Please see my [Flowchart here](assets/images//Flowchart.jpg)
 
 ---
@@ -115,8 +115,8 @@ Hosted on github pages
 ---
 
 ## Credits
-- [Code Grabber](https://www.codegrepper.com/code-examples/python/how+to+clear+the+console+in+python) - Used to help clear screen, attmepted using os.system("cls") however i kept getting an error.
-- [Youtube](https://www.youtube.com/watch?v=m4nEnsavl6w&t=191s) - Helped structure code and decide how i was going to lay out my code
+- [Code Grabber](https://www.codegrepper.com/code-examples/python/how+to+clear+the+console+in+python) - Used to help clear screen, attmepted using os.system("cls") however I kept getting an error.
+- [Youtube](https://www.youtube.com/watch?v=m4nEnsavl6w&t=191s) - Helped structure code and decide how I was going to lay out my code
 - [YouTube](https://www.youtube.com/watch?v=3_CX0aD9Fdg) - Helped with adding the more advanced features such as images, dictionary for my words.
 
 ### 6.1. Media
